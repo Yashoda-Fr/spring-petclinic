@@ -135,11 +135,6 @@ class PetController {
 		return "redirect:/owners/{ownerId}";
 	}
 
-	/**
-	 * Updates the pet details if it exists or adds a new pet to the owner.
-	 * @param owner The owner of the pet
-	 * @param pet The pet with updated details
-	 */
 	private void updatePetDetails(Owner owner, Pet pet) {
 		Integer id = pet.getId();
 		Assert.state(id != null, "'pet.getId()' must not be null");
