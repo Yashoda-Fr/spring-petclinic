@@ -9,13 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface OwnerRepository extends JpaRepository<Owner, Integer> {
 
-	/**
-	 * Retrieve {@link Owner}s from the data store by last name, returning all owners
-	 * whose last name <i>starts</i> with the given name.
-	 * @param lastName Value to search for
-	 * @return a Collection of matching {@link Owner}s (or an empty Collection if none
-	 * found)
-	 */
 	Page<Owner> findByLastNameStartingWith(String lastName, Pageable pageable);
 
 	/**
